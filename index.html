@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Generator</title>
+  <script src="charactercreator.js" defer></script>
+</head>
+<body>
+  <h1>Character Generator</h1>
+
+  <button id="randomBtn">Generate Random Character</button>
+  <button id="customBtn">Customize Character</button>
+<!-- Base form for custom character creation -->
+  <div id="customCharacterForm" style="display: none;">
+    <h3>Customize Your Character</h3>
+    <label for="raceSelect">Race:</label>
+    <select id="raceSelect"></select><br>
+
+    <label for="classSelect">Class:</label>
+    <select id="classSelect"></select><br>
+
+    <label for="alignmentSelect">Alignment:</label>
+    <select id="alignmentSelect"></select><br>
+<!-- Form for scores -->
+    <h4>Ability Scores</h4>
+    <label for="strength">Strength:</label>
+    <input type="number" id="strength" min="8" max="18" value="10"><br>
+
+    <label for="dexterity">Dexterity:</label>
+    <input type="number" id="dexterity" min="8" max="18" value="10"><br>
+
+    <label for="constitution">Constitution:</label>
+    <input type="number" id="constitution" min="8" max="18" value="10"><br>
+
+    <label for="intelligence">Intelligence:</label>
+    <input type="number" id="intelligence" min="8" max="18" value="10"><br>
+
+    <label for="wisdom">Wisdom:</label>
+    <input type="number" id="wisdom" min="8" max="18" value="10"><br>
+
+    <label for="charisma">Charisma:</label>
+    <input type="number" id="charisma" min="8" max="18" value="10"><br>
+
+    <label for="armorClass">Armor Class (AC): </label>
+    <input type="number"  id="armorClass" min="8" max="16" value="10"><br>
+
+    <button id="submitCustom">Submit</button>
+    <button id="resetCustom">Reset</button>
+  </div>
+
+  <div id="output"></div>
+</body>
+</html>
