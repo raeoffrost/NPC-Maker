@@ -16,7 +16,7 @@
     <h1 class="text-center">Who the F@CK is this NPC?</h1>
 
     <!--PHP Action form here to save page? <form action="action_page.php" method="POST"-->
-
+      <form>
     <!--Name, Class, Race, Subrace-->
     <div class="container">
       
@@ -69,10 +69,10 @@
     
     <!--Armor, Hit Points, Size, Alignment Speed-->
 
-    <div style="display: flex; justify-content: space-between;">
+    <div class="flex-nowrap" style="display: flex; justify-content: space-between; gap:20px;">
 
     <!--Armor Class & Modify Armor-->
-    <div class="container" style="width: 250px; height: 200px">
+    <div class="container" style="height: 200px;">
 
      <!--Armor Class Field-->      
       <div>
@@ -94,27 +94,29 @@
     
 
     <!--Hit Points Field-->
-    <div class="container" style="max-width: 200px; height: 200px;">
+    <div class="container d-flex flex-column" style="height: 200px;">
+      <div class="text-start w-100">
      <i class="bi bi-heart"></i>
      
      <label for="hp" class="form-label">Hit Points</label>
-    <div>
+    </div>
+    <div class="d-flex flex-row">
      <input type="number" class="form-control" id="hp" disabled>
-
-     <button type="button" class="btn btn-light">reset</button>
+    <div class="p-1">
+     <button type="button" class="btn btn-light m-1">reset</button>
      <!--need to reset just hit points only-->
-
      <div class="btn-group-vertical" role="group" aria-label="modHP">
       <button type="button" class="btn btn-light">-</button>
       <button type="button" class="btn btn-light">+</button>
      </div>
+    </div>
     </div>
     </div> 
 
     
 
     <!--Size, Alignment & Speed-->
-    <div class="container row" style="max-width: 300px; height: 200px;">
+    <div class="container row" style="height: 200px;">
       <div class="row">
     <!--Size Field-->
       <div class="mb-2">
@@ -233,17 +235,17 @@
 
     <!--Racial Abilities & Skills-->
 
-    <div style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+    <div style="display: flex; flex-wrap: nowrap;">
 
         <!--Racial Abilities Field-->
-        <div class="container" style="max-width: fit-content;">
+        <div class="container d-flex flex-column" style="margin: 0 20px 20px 0;justify-content: flex-start;align-items: flex-start;">
         <label for="Racial Abilities" class="form-label">Racial Abilities</label>
-        <textarea class="form-control" aria-label="Racial Abilities"></textarea>
+        <textarea class="form-control h-100" aria-label="Racial Abilities"></textarea>
         </div>
 
         <!--Skills-->
 
-        <div class="container" style="width: 200px; font-size: 14px; padding: 0;">
+        <div class="container" style="width: 250px; font-size: 14px; padding: 0;">
             <ul class="list-group">
               <li class="list-group-item">
                 <input class="form-check-input" type="checkbox" value="" id="acrobatics">
@@ -319,14 +321,14 @@
             </ul>
         </div>
     </div>   
-         
+ 
     <!--Languages & Notes-->
-    <div style="display: flex; align-items: flex-start; flex-wrap: wrap;">
-      <div class="container">
+    <div class="d-flex align-items-start flex-nowrap gap-4">
+      <div class="container d-flex flex-column align-items-start">
        <label for="languages" class="form-label">Languages</label>
        <textarea class="form-control" aria-label="languages"></textarea>
       </div>
-      <div class="container">
+      <div class="container d-flex flex-column align-items-start">
         <label for="notes" class="form-label">Notes</label>
         <textarea class="form-control" aria-label="notes"></textarea>
        </div>
@@ -338,7 +340,9 @@
       <button type="reset" class="btn btn-danger btn-primary clearall w-50">Clear All Values</button>
       <button type="button" class="btn btn-success btn-primary saveNPC w-50">Save NPC & Story Button</button>
     </div>
-    <h1 class="text-center">What the F@CK is this NPCs backstory?</h1>
+
+  </form>
+    <h1 class="text-center">What the F@CK <br>is this NPCs backstory?</h1>
     <!--Randomize Story-->
     <div class="container">
       
