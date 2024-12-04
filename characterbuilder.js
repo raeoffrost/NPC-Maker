@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const race = getRandomValue(races);
         document.getElementById("race").value = race.toLowerCase();
         document.getElementById("subrace").value = getRandomValue(subraces[race]).toLowerCase();
-        document.querySelector('[aria-label="Size"]').value = getRandomValue(sizes).toLowerCase();
-        document.querySelector('[aria-label="Alignment"]').value = getRandomValue(alignments).toLowerCase();
-        document.querySelector('[aria-label="speed"]').value = getRandomInt(25, 30); // Typical speed range
+        document.getElementById("size").value = getRandomValue(sizes).toLowerCase();
+        document.getElementById("alignment").value = getRandomValue(alignments).toLowerCase();
+        document.getElementById("speed").value = getRandomInt(25, 30); // Typical speed range
         document.getElementById("armor").value = getRandomInt(10, 13); // AC Range
         document.getElementById("hp").value = getRandomInt(6, 12); // HP Range
 
@@ -46,20 +46,20 @@ document.addEventListener("DOMContentLoaded", () => {
             input.checked = Math.random() > 0.15; // 33% chance for saving throw proficiency
         });
     };
-//Added arrays to fill recommened values with race, subrace and class selection. 
+    //Added arrays to fill recommended values with race, subrace and class selection. 
     // Assign recommended values
     const recommendedValues = [
         {
             race: "Human",
             subrace: "Human Regular",
-            class: "Figher",
+            class: "Fighter",
             speed: 30,
             armor: 13,
             hp: 12,
             abilities: {
                 strength: 16,
                 dexterity: 12,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 8,
                 wisdom: 12,
                 charisma: 10,
@@ -68,14 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Variant",
-            class: "Figher",
+            class: "Fighter",
             speed: 30,
             armor: 13,
             hp: 11,
             abilities: {
                 strength: 15,
                 dexterity: 14,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 8,
                 wisdom: 12,
                 charisma: 10,
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 14,
                 dexterity: 10,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 10,
                 wisdom: 15,
                 charisma: 10,
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 13,
                 dexterity: 10,
-                costitution: 15,
+                constitution: 15,
                 intelligence: 10,
                 wisdom: 14,
                 charisma: 10,
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 16,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 14,
                 wisdom: 12,
                 charisma: 12,
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 16,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 12,
                 wisdom: 12,
                 charisma: 14,
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 15,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 15,
                 wisdom: 8,
                 charisma: 10,
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 14,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 16,
                 wisdom: 9,
                 charisma: 10,
@@ -180,14 +180,14 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Lightfoot Halfling",
-            class: "Figher",
+            class: "Fighter",
             speed: 25,
             armor: 13,
             hp: 12,
             abilities: {
                 strength: 16,
                 dexterity: 14,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 8,
                 wisdom: 12,
                 charisma: 10,
@@ -196,14 +196,14 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Stout Halfling",
-            class: "Figher",
+            class: "Fighter",
             speed: 25,
             armor: 13,
             hp: 11,
             abilities: {
                 strength: 15,
                 dexterity: 14,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 8,
                 wisdom: 12,
                 charisma: 10,
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 14,
                 dexterity: 10,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 10,
                 wisdom: 15,
                 charisma: 10,
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 13,
                 dexterity: 10,
-                costitution: 15,
+                constitution: 15,
                 intelligence: 10,
                 wisdom: 14,
                 charisma: 10,
@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 16,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 14,
                 wisdom: 12,
                 charisma: 12,
@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 16,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 12,
                 wisdom: 12,
                 charisma: 14,
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 15,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 15,
                 wisdom: 8,
                 charisma: 10,
@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 14,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 16,
                 wisdom: 9,
                 charisma: 10,
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 16,
                 dexterity: 12,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 8,
                 wisdom: 12,
                 charisma: 10,
@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 15,
                 dexterity: 14,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 8,
                 wisdom: 12,
                 charisma: 10,
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 14,
                 dexterity: 10,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 10,
                 wisdom: 15,
                 charisma: 10,
@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 13,
                 dexterity: 10,
-                costitution: 15,
+                constitution: 15,
                 intelligence: 10,
                 wisdom: 14,
                 charisma: 10,
@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 16,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 14,
                 wisdom: 12,
                 charisma: 12,
@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 16,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 12,
                 wisdom: 12,
                 charisma: 14,
@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 15,
-                costitution: 14,
+                constitution: 14,
                 intelligence: 15,
                 wisdom: 8,
                 charisma: 10,
@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
             abilities: {
                 strength: 8,
                 dexterity: 14,
-                costitution: 13,
+                constitution: 13,
                 intelligence: 16,
                 wisdom: 9,
                 charisma: 10,
@@ -451,14 +451,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("class").value = selected.class.toLowerCase();
         document.getElementById("race").value = selected.race.toLowerCase();
         document.getElementById("subrace").value = selected.subrace.toLowerCase();
-        document.getElementById('[aria-label="Size"]').value = selected.size.toLowerCase();
-        document.getElementById('[aria-label="speed"]').value = selected.speed;
+        document.getElementById("size").value = selected.size.toLowerCase();
+        document.getElementById("speed").value = selected.speed;
         document.getElementById("armor").value = selected.armor;
         document.getElementById("hp").value = selected.hp;
 
-        document.getElementById("strenght").value = selected.abilities.strength;
+        document.getElementById("strength").value = selected.abilities.strength;
         document.getElementById("dexterity").value = selected.abilities.dexterity;
-        document.getElementById("constitution").value = selected.abilities.costitution;
+        document.getElementById("constitution").value = selected.abilities.constitution;
         document.getElementById("intelligence").value = selected.abilities.intelligence;
         document.getElementById("wisdom").value = selected.abilities.wisdom;
         document.getElementById("charisma").value = selected.abilities.charisma;
