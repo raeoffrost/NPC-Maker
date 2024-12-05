@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
             input.checked = Math.random() > 0.15; // 33% chance for saving throw proficiency
         });
     };
-    //Added arrays to fill recommended values with race, subrace and class selection. 
+    // Added arrays to fill recommended values with race, subrace and class selection. 
     // Assign recommended values
     const recommendedValues = [
         {
             race: "Human",
             subrace: "Human Regular",
-            class: "Fighter",
+            charClass: "Fighter",
             speed: 30,
             armor: 13,
             hp: 12,
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Variant",
-            class: "Fighter",
+            charClass: "Fighter",
             speed: 30,
             armor: 13,
             hp: 11,
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Regular",
-            class: "Cleric",
+            charClass: "Cleric",
             speed: 30,
             armor: 13,
             hp: 9,
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Variant",
-            class: "Cleric",
+            charClass: "Cleric",
             speed: 30,
             armor: 13,
             hp: 10,
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Regular",
-            class: "Rogue",
+            charClass: "Rogue",
             speed: 30,
             armor: 11,
             hp: 10,
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Variant",
-            class: "Rogue",
+            charClass: "Rogue",
             speed: 30,
             armor: 11,
             hp: 10,
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Regular",
-            class: "Wizard",
+            charClass: "Wizard",
             speed: 30,
             armor: 10,
             hp: 8,
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Human",
             subrace: "Human Variant",
-            class: "Wizard",
+            charClass: "Wizard",
             speed: 30,
             armor: 10,
             hp: 7,
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Lightfoot Halfling",
-            class: "Fighter",
+            charClass: "Fighter",
             speed: 25,
             armor: 13,
             hp: 12,
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Stout Halfling",
-            class: "Fighter",
+            charClass: "Fighter",
             speed: 25,
             armor: 13,
             hp: 11,
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Lightfoot Halfling",
-            class: "Cleric",
+            charClass: "Cleric",
             speed: 25,
             armor: 13,
             hp: 9,
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Stout Halfling",
-            class: "Cleric",
+            charClass: "Cleric",
             speed: 25,
             armor: 13,
             hp: 10,
@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Lightfoot Halfling",
-            class: "Rogue",
+            charClass: "Rogue",
             speed: 25,
             armor: 11,
             hp: 10,
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Stout Halfling",
-            class: "Rogue",
+            charClass: "Rogue",
             speed: 25,
             armor: 11,
             hp: 10,
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Lightfoot Halfling",
-            class: "Wizard",
+            charClass: "Wizard",
             speed: 25,
             armor: 10,
             hp: 8,
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Halfling",
             subrace: "Lightfoot Halfling",
-            class: "Wizard",
+            charClass: "Wizard",
             speed: 25,
             armor: 10,
             hp: 7,
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Hill Dwarf",
-            class: "Fighter",
+            charClass: "Fighter",
             speed: 25,
             armor: 13,
             hp: 12,
@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Mountain Dwarf",
-            class: "Fighter",
+            charClass: "Fighter",
             speed: 25,
             armor: 13,
             hp: 11,
@@ -340,7 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Hill Dwarf",
-            class: "Cleric",
+            charClass: "Cleric",
             speed: 25,
             armor: 13,
             hp: 9,
@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Mountain Dwarf",
-            class: "Cleric",
+            charClass: "Cleric",
             speed: 25,
             armor: 13,
             hp: 10,
@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Hill Dwarf",
-            class: "Rogue",
+            charClass: "Rogue",
             speed: 25,
             armor: 11,
             hp: 10,
@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Mountian Dwarf",
-            class: "Rogue",
+            charClass: "Rogue",
             speed: 25,
             armor: 11,
             hp: 10,
@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Hill Dwarf",
-            class: "Wizard",
+            charClass: "Wizard",
             speed: 25,
             armor: 10,
             hp: 8,
@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             race: "Dwarf",
             subrace: "Mountain Dwarf",
-            class: "Wizard",
+            charClass: "Wizard",
             speed: 25,
             armor: 10,
             hp: 7,
@@ -435,33 +435,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     ];
-
+    const selectRandomPreset = (presetsArray) => {
+        const randomSet = Math.floor(Math.random() * presetsArray.length);
+        return presetsArray[randomSet];
+    };
+    
     const assignRecommendedValues = () => {
+
+        const selected = selectRandomPreset(recommendedValues);
         
-        const userRace = document.getElementById("race").value.toLowerCase();
-        const userSubrace = document.getElementById("subrace").value.toLowerCase();
-        const userClass = document.getElementById("class").value.toLowerCase();
-
-        const selected = recommendedValues.find(item =>
-            item.race.toLowerCase() === userRace &&
-            item.subrace.toLowerCase() === userSubrace &&
-            item.class.toLowerCase() === userClass
-        ); 
-
-        document.getElementById("class").value = selected.class.toLowerCase();
+        document.getElementById("class").value = selected.charClass.toLowerCase();
         document.getElementById("race").value = selected.race.toLowerCase();
         document.getElementById("subrace").value = selected.subrace.toLowerCase();
-        document.getElementById("size").value = selected.size.toLowerCase();
-        document.getElementById("speed").value = selected.speed;
-        document.getElementById("armor").value = selected.armor;
-        document.getElementById("hp").value = selected.hp;
+        // document.getElementById("size").value = selected.size.toLowerCase();
+        document.getElementById("speed").value = Number(selected.speed);
+        document.getElementById("armor").value = Number(selected.armor);
+        document.getElementById("hp").value = Number(selected.hp);
 
-        document.getElementById("strength").value = selected.abilities.strength;
-        document.getElementById("dexterity").value = selected.abilities.dexterity;
-        document.getElementById("constitution").value = selected.abilities.constitution;
-        document.getElementById("intelligence").value = selected.abilities.intelligence;
-        document.getElementById("wisdom").value = selected.abilities.wisdom;
-        document.getElementById("charisma").value = selected.abilities.charisma;
+        document.getElementById("strength").value = Number(selected.abilities.strength);
+        document.getElementById("dexterity").value = Number(selected.abilities.dexterity);
+        document.getElementById("constitution").value = Number(selected.abilities.constitution);
+        document.getElementById("intelligence").value = Number(selected.abilities.intelligence);
+        document.getElementById("wisdom").value = Number(selected.abilities.wisdom);
+        document.getElementById("charisma").value = Number(selected.abilities.charisma);
 
     };
 
