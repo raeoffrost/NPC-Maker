@@ -435,11 +435,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     ];
+    // Select a random preset from Array
     const selectRandomPreset = (presetsArray) => {
         const randomSet = Math.floor(Math.random() * presetsArray.length);
         return presetsArray[randomSet];
     };
-    
+
+    // Assign values from recommended preset to form fields
     const assignRecommendedValues = () => {
 
         const selected = selectRandomPreset(recommendedValues);
