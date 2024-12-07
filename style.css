@@ -1,0 +1,171 @@
+/* CSS Variables */
+:root {
+    /* Colors */
+    --dark-w: #c0b7ab;
+    --medium-w: #e0d9d1;
+    --light-w: #e8e4e1;
+    --dark-red: #3a0c0c;
+    --red:  #9c2b1b;
+    /* Typography */
+    --font-primary: "Roboto Mono", monospace;
+    --font-display: "Jacquard 24", system-ui;
+    /* Default Utilities*/
+    --padding: 20px;
+    --border: 1px solid var(--dark-red);
+    --radius: 5px;
+}
+/* Full Page styles */
+
+body {
+    background-color: #b0aa9f;
+    color: var(--red);
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    font-optical-sizing: auto;
+    font-size: .9rem;
+  }
+  .container {
+    background-color: var(--medium-w); 
+    padding: var(--padding);
+    border-radius: var(--radius);
+    border: var(--border);
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;        
+    text-align: center;
+  }
+
+/* Typography */
+
+  h1{
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--dark-red);
+    font-size: 5em;
+  }
+/* Icons */
+.fa-solid, .fa-regular, .bi{
+color: var(--dark-red);
+}
+/* Form Styles */
+
+  .form-control, .form-select {
+    background-color: var(--light-w);  
+    border-radius: var(--radius);
+    border: var(--border);
+  }
+
+  .form-control:focus, .form-select:focus {
+    border-color: var(--dark-red); 
+    box-shadow: 0 0 5px rgba(139, 43, 19, 0.5); 
+  }
+
+  .list-group-item {
+    color: var(--red);
+    background-color: transparent; 
+    border: none;
+    text-align: left;
+  }
+  .form-check-input {
+    border: var(--border);
+  }
+  .form-check-input:focus {
+    border-color: var(--dark-red); 
+    box-shadow: 0 0 5px rgba(139, 43, 19, 0.5);
+  }
+
+  .armor {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius);
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .abilities {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius);
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .input-group-text{
+    border: var(--border);
+  }
+  .form-check-input:checked {
+    background-color: var(--dark-red);
+    
+}
+ .form-check-input:focus{
+    box-shadow:none;
+    border: #000000 1px solid;
+ }
+
+ #output{
+  background-color: var(--light-w);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+ }
+
+/* Buttons */
+
+  .btn-primary {
+    background-color: #5a2615dc;
+    border: none;
+    border-radius: 5px;
+    border-color: #000000;
+    border-width: 7px;
+    align-items: center;
+    color:#e1e1e1db;
+    padding: 7px;
+  }
+
+  .btn-primary:hover {
+    background-color: #36170cdc;
+  }
+  .btn-light{
+    border: #000000 1px solid;
+  }
+  .btn-light:hover{
+    border: #000000 1px solid;
+  }
+  .clearall {
+    background-color: #951b02;
+  }
+  .saveNPC {
+    background-color: rgb(55, 125, 77);
+  }
+  .randomize {
+    background-color: rgb(91, 91, 203);
+    color: #ffffff;
+  }
+  .randomize:hover{
+    background-color: #4545a8;
+    color: #ffffff;
+   }
+  
+
+  textarea {
+  resize: none;
+  background-color: #e1e1e1db; 
+  }
+
+
+  /* Hide arrows from number: Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
