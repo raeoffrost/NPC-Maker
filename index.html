@@ -15,7 +15,7 @@
   <body class="p-4"> 
     <h1 class="text-center">Who the F@CK is this NPC?</h1>
 
-    <!--PHP Action form here to save page? <form action="action_page.php" method="POST"-->
+    <!--PHP Action form here to save page? <form action="action_page.php" method="POST", undecided-->
       <form>
     <!--Name, Class, Race, Subrace-->
     <div class="container">
@@ -49,7 +49,7 @@
 
         <!--Subrace Field-->
         <!--Predecated on Race selection -->
-        <!--Populates from Javascript-->
+        <!--Populates from Javascript, not yet functional-->
 
         <div>
           <select class="form-select" id="subrace" name="subrace" aria-label="Subrace" required>
@@ -82,7 +82,7 @@
       </div>
 
       
-     <!--Modify Armor Field-->
+     <!--Modify Armor Field, not yet functional-->
 
       <div>
        <label for="modArmor" class="form-label">Modify Armor</label>
@@ -104,10 +104,13 @@
      <input type="number" class="form-control" id="hp" disabled>
     <div class="p-1">
      <button type="button" class="btn btn-light m-1">reset</button>
-     <!--need to reset just hit points only-->
+     <!--need to reset just hit points only, not yet functional-->
+
      <div class="btn-group-vertical" role="group" aria-label="modHP">
+        <!--change hit point manually, not yet functional-->
       <button type="button" class="btn btn-light">-</button>
       <button type="button" class="btn btn-light">+</button>
+
      </div>
     </div>
     </div>
@@ -120,7 +123,7 @@
       <div class="row">
     <!--Size Field-->
       <div class="mb-2">
-        <select class="form-select" aria-label="Size">
+        <select class="form-select" aria-label="Size" id="size">
           <option selected disabled>Size</option>
           <option value="tiny">Tiny</option>
           <option value="small">Small</option>
@@ -130,7 +133,7 @@
       </div> 
     <!--Alignment Field-->
      <div class="mb-2">
-      <select class="form-select" aria-label="Alignment">
+      <select class="form-select" aria-label="Alignment" id="alignment">
         <option selected disabled>Alignment</option>
         <option value="lawful">Lawful Good</option>
         <option value="neutral good">Neutral Good</option>
@@ -145,8 +148,8 @@
      </div>
     <!--Speed Field-->
       <div class="input-group">
-        <input type="number" class="form-control" aria-label="speed" aria-describedby="speed">
-        <span class="input-group-text" id="speed">Speed (ft.)</span>
+        <input type="number" class="form-control" aria-label="speed" aria-describedby="speed" id="speed">
+        <span class="input-group-text">Speed (ft.)</span>
       </div>
     
   </div> 
@@ -180,25 +183,27 @@
       </div>
       <!--Constitution-->
       <div>
-        <input type="number" class="form-control abilities" id="strength" min="4" max="20">
+        <input type="number" class="form-control abilities" id="constitution" min="4" max="20">
         <i class="fa-solid fa-heart"></i>
         <label for="constitution" class="form-label">Constitution</label>
       </div>
       <!--Intelligence-->
       <div>
-        <input type="number" class="form-control abilities" id="strength" min="4" max="20">
+        <input type="number" class="form-control abilities" id="intelligence" min="4" max="20">
         <i class="fa-solid fa-brain"></i>
         <label for="intelligence" class="form-label">Intelligence</label>
       </div>
-      <!--Widsom-->
+      <!--Wisdom-->
       <div>
-        <input type="number" class="form-control abilities" id="strength" min="4" max="20">
+        <input type="number" class="form-control abilities" id="wisdom" min="4" max="20">
+
         <i class="fa-regular fa-eye"></i>
         <label for="wisdom" class="form-label">Wisdom</label>
       </div>
       <!--Charisma-->
       <div>
-        <input type="number" class="form-control abilities" id="strength" min="4" max="20">
+        <input type="number" class="form-control abilities" id="charisma" min="4" max="20">
+
         <i class="fa-solid fa-face-smile-wink"></i>
         <label for="charisma" class="form-label">Charisma</label>
       </div>
@@ -334,7 +339,7 @@
        </div>
     </div>
 
-    <!--Clear and Save-->
+    <!--Clear and Save, not yet functional-->
   
     <div class="d-flex justify-content-between gap-4 mb-4">
       <button type="reset" class="btn btn-danger btn-primary clearall w-50">Clear All Values</button>
@@ -343,26 +348,19 @@
 
   </form>
     <h1 class="text-center">What the F@CK <br>is this NPCs backstory?</h1>
-    <!--Randomize Story-->
+    <!--Randomize Story, not yet functional-->
     <div class="container">
       
         <button type="button" class="btn btn-primary randomize">Randomize Story</button>
       
       <div id="story" style="min-height: 20px;"> The Goblin's lute has gone missing...</div>
     </div>
-    
-        
-      
-
-   
-    
-
-
     </div>
     </div> 
     </form> 
   </body>
 
+<script src="characterbuilder.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> 
