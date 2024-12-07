@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Randomize saving throws
         document.querySelectorAll(".form-check-input").forEach(input => {
-            input.checked = Math.random() > 0.15; // 33% chance for saving throw proficiency
+            input.checked = Math.random() > 0.70; // Changed chance of saving throw
         });
     };
     // Added arrays to fill recommended values with race, subrace and class selection. 

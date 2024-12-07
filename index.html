@@ -48,7 +48,7 @@
         </div>
 
         <!--Subrace Field-->
-        <!--Predecated on Race selection -->
+        <!--Predicated on Race selection -->
         <!--Populates from Javascript-->
 
         <div>
@@ -342,30 +342,35 @@
     </div>
 
   </form>
-    <h1 class="text-center">What the F@CK <br>is this NPCs backstory?</h1>
-    <!--Randomize Story-->
-    <div class="container">
-      
-        <button type="button" class="btn btn-primary randomize">Randomize Story</button>
-      
-      <div id="story" style="min-height: 20px;"> The Goblin's lute has gone missing...</div>
-    </div>
-    
-        
-      
-
-   
-    
-
-
-    </div>
-    </div> 
-    </form> 
-  </body>
-
-<script src="characterbuilder.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
-   
+  <h1 class="text-center">What the F@CK <br>is this NPCs backstory?</h1>
+  <!--Randomize Story-->
+  <div class="container">
+    <article>
+          <div id="output">
+              <noscript>
+                  <dl>
+                      <dt>What the fuck! You don't even have JavaScript enabled!</dt>
+                      <dd>You need to enable it to see all the fucking cool shit on this website...</dd>
+                  </dl>
+              </noscript>
+          </div>
+          <a id="generate"  class="btn randomize" href="#" title="Hit me again!"></a>
+      </article>
+  </div>
+  </div> 
+  </form> 
+  <footer>
+    <div id="about">If you make it, make sure you make it <a href="http://www.opensource.org/" target="blank">Open Source</a></div>
+    <div id="credit">Built with <a href="https://github.com/soulwire/WTFEngine" title="An HTML / CSS / JavaScript template for creating WhatTheFuckIsMyMashup.com style web sites" target="_blank">WTF Engine</a> by <a href="http://blog.soulwire.co.uk/" title="Made by Justin Windle @soulwire">Justin</a></div>
+    <div>Inspired by <a href="http://whatthefuckshouldimakefordinner.com/" target="_blank">WTFSIMFD</a></div>
+  </footer>
+</body>	
+<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.2/zepto.min.js"></script>
+  <script>window.Zepto || document.write('<script src="scripts/vendor/zepto.min.js"><\/script>')</script>
+  <script src="WTFEngine/scripts/wtf.js"></script>
+  <script src="WTFEngine/scripts/main.js"></script>  	
+  <script src="characterbuilder.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
 </html>
