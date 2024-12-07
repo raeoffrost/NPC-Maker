@@ -15,7 +15,7 @@
   <body class="p-4"> 
     <h1 class="text-center">Who the F@CK is this NPC?</h1>
 
-    <!--PHP Action form here to save page? <form action="action_page.php" method="POST"-->
+    <!--PHP Action form here to save page? <form action="action_page.php" method="POST", undecided-->
       <form>
     <!--Name, Class, Race, Subrace-->
     <div class="container">
@@ -48,8 +48,8 @@
         </div>
 
         <!--Subrace Field-->
-        <!--Predicated on Race selection -->
-        <!--Populates from Javascript-->
+        <!--Based on Race selection -->
+        <!--Javascript filtering, not yet functional-->
 
         <div>
           <select class="form-select" id="subrace" name="subrace" aria-label="Subrace" required>
@@ -82,7 +82,7 @@
       </div>
 
       
-     <!--Modify Armor Field-->
+     <!--Modify Armor Field, not yet functional-->
 
       <div>
        <label for="modArmor" class="form-label">Modify Armor</label>
@@ -103,11 +103,15 @@
     <div class="d-flex flex-row">
      <input type="number" class="form-control" id="hp" disabled>
     <div class="p-1">
+
      <button type="button" class="btn btn-light m-1">reset</button>
-     <!--need to reset just hit points only-->
-    <div class="btn-group-vertical" role="group" aria-label="modHP">
-      <!--<button type="button" class="btn btn-light">-</button>
-      <button type="button" class="btn btn-light">+</button> -->
+      <!--need to reset just hit points only, not yet functional-->
+
+     <div class="btn-group-vertical" role="group" aria-label="modHP">
+        <!--change hit point manually, not yet functional-->
+      <button type="button" class="btn btn-light">-</button>
+      <button type="button" class="btn btn-light">+</button>
+
      </div>
     </div>
     </div>
@@ -145,8 +149,8 @@
      </div>
     <!--Speed Field-->
       <div class="input-group">
-        <input type="number" class="form-control" aria-label="speed" aria-describedby="speed" id="speed"> 
-        <span class="input-group-text" id="speed">Speed (ft.)</span>
+        <input type="number" class="form-control" aria-label="speed" aria-describedby="speed" id="speed">
+        <span class="input-group-text">Speed (ft.)</span>
       </div>
     
   </div> 
@@ -193,12 +197,14 @@
       <!--Wisdom-->
       <div>
         <input type="number" class="form-control abilities" id="wisdom" min="4" max="20">
+
         <i class="fa-regular fa-eye"></i>
         <label for="wisdom" class="form-label">Wisdom</label>
       </div>
       <!--Charisma-->
       <div>
         <input type="number" class="form-control abilities" id="charisma" min="4" max="20">
+
         <i class="fa-solid fa-face-smile-wink"></i>
         <label for="charisma" class="form-label">Charisma</label>
       </div>
@@ -334,7 +340,7 @@
        </div>
     </div>
 
-    <!--Clear and Save-->
+    <!--Clear and Save, save not yet functional-->
   
     <div class="d-flex justify-content-between gap-4 mb-4">
       <button type="reset" class="btn btn-danger btn-primary clearall w-50">Clear All Values</button>
