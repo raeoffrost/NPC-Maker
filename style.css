@@ -103,6 +103,15 @@ color: var(--dark-red);
     background-color: var(--dark-red);
     
 }
+
+.underline-header {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #3a0c0c;
+  padding-bottom: 8px;
+  text-align: left;
+  margin-bottom: 10px;
+}
  .form-check-input:focus{
     box-shadow:none;
     border: #000000 1px solid;
@@ -260,7 +269,7 @@ input[type=number] {
       justify-content: space-between;
     }
   }
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 765px) {
   .input-wrap{
     flex-wrap: wrap;
     padding: 5px;   
@@ -272,7 +281,20 @@ input[type=number] {
     flex-wrap: wrap;
     justify-content: center;
   }  
-
+  .skills-wrap{
+    width: 100%;
+    align-items: start;
+  }
+  .r-abilities{
+    width: 100%;
+    min-height:100px;
+    margin: 0;
+    margin-bottom: 20px;
+    
+  }
+.r-abilities{
+  max-width: 100%;
+} 
   }
   @media only screen and (max-width: 550px) {
     .st-wrap{
@@ -289,15 +311,7 @@ input[type=number] {
       width: 100%;
       justify-content: space-evenly;
     }
-    .r-abilities{
-      width: 100%;
-      min-height:100px;
-      margin: 0;
-      margin-bottom: 20px;
-      
-    }
-    .skills{
-      width: 100%;
-    }
+ 
+   
     
   }
