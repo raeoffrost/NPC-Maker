@@ -42,9 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("charisma").value = getRandomInt(abilityScoreRange.min, abilityScoreRange.max);
 
         // Randomize saving throws
-        document.querySelectorAll(".form-check-input").forEach(input => {
-            input.checked = Math.random() > 0.70; // 33% chance for saving throw proficiency
-        }); // make the saving and skills different
+        document.querySelectorAll(".form-check-input-saving").forEach(input => {
+            input.checked = Math.random() > 0.90; // Changed chance of saving throw
+        });
+        document.querySelectorAll('.form-check-input-skills').forEach(input => {
+            input.checked = Math.random() > 0.75;
+        });
+    
     };
     // Added arrays to fill recommended values with race, subrace and class selection. 
     // Assign recommended values
