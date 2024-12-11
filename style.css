@@ -106,6 +106,15 @@ color: var(--dark-red);
     box-shadow:none;
     border: #000000 1px solid;
  }
+
+ #output{
+  background-color: var(--light-w);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+ }
+
 /* Buttons */
 
   .btn-primary {
@@ -136,7 +145,13 @@ color: var(--dark-red);
   }
   .randomize {
     background-color: rgb(91, 91, 203);
+    color: #ffffff;
   }
+  .randomize:hover{
+    background-color: #4545a8;
+    color: #ffffff;
+   }
+  
 
   textarea {
   resize: none;
