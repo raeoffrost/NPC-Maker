@@ -18,13 +18,15 @@
     <!--PHP Action form here to save page? <form action="action_page.php" method="POST", undecided-->
       <form>
     <!--Name, Class, Race, Subrace-->
-    <div class="form-container">
-      <div class="input-wrap" style="margin-right: 20px;">
-
+    <div class="container">
+      
         <!--Name Field-->
+        <div>
           <input class="form-control" type="text" id="name" name="name" placeholder="Name" aria-label="name">
-
+        </div>
+        
         <!--Class Field-->
+          <div>
           <select class="form-select" id="class" name="class" aria-label="Class">
             <option selected disabled>Class</option>
             <option value="cleric">Cleric</option>
@@ -32,11 +34,10 @@
             <option value="rogue">Rogue</option>
             <option value="wizard">Wizard</option>
           </select>
-      </div>
-
-      <div class="input-wrap">
+          </div>
 
         <!--Race Field-->
+        <div>
           <select class="form-select" id="race" name="race" aria-label="Race" required>
             <option selected disabled>Race</option>
             <option value="dwarf">Dwarf</option>
@@ -44,11 +45,14 @@
             <option value="halfling">Halfling</option>
             <option value="human">Human</option>
           </select>
+        </div>
 
         <!--Subrace Field-->
 
         <!--Based on Race selection -->
         <!--Javascript filtering, not yet functional-->
+
+        <div>
           <select class="form-select" id="subrace" name="subrace" aria-label="Subrace" required>
             <option selected disabled>Subrace</option>
             <option value="hill dwarf">Hill Dwarf</option>
@@ -59,46 +63,66 @@
             <option value="stout halfling">Stout Halfling</option>
             <option value="human variant">Variant Rules</option>
             <option value="human regular">Regular Rules</option>
-          </select>  
-
-      </div>
+          </select>
+        </div>
     </div>
     
     
     <!--Armor, Hit Points, Size, Alignment Speed-->
 
-    <div class="ac-hp-wrap" style="gap:20px;">
-      <div class="ac-hp-input-wrap">
-    <!--Armor Class-->
-    <div class="form-container" style="height: 200px;">
+    <div class="flex-nowrap" style="display: flex; justify-content: space-between; gap:20px;">
+
+    <!--Armor Class & Modify Armor-->
+    <div class="container" style="height: 200px;">
 
      <!--Armor Class Field-->      
-      <div class="p-1">
-        <div>
+      <div>
        <i class="bi bi-shield-shaded"></i>
        <label for="armor" class="form-label">Armor Class</label>
+       <input type="number" class="form-control armor" id="armor" disabled>
       </div>
-       <input type="number" class="form-control armor" id="armor">
+
+      
+     <!--Modify Armor Field, not yet functional-->
+
+      <div>
+       <label for="modArmor" class="form-label">Modify Armor</label>
+       <input type="number" class="form-control armor" id="modArmor">
       </div>
+
+    </div>
+    
+    
 
     <!--Hit Points Field-->
-      <div class="p-1">
-      <div>
-        <i class="bi bi-heart"></i>
-        <label for="hp" class="form-label">Hit Points</label>
-      </div>
-      <div class="d-flex flex-row hp">
-      <input type="number" class="form-control" id="hp">
-      </div>
-      </div>
+    <div class="container d-flex flex-column" style="height: 200px;">
+      <div class="text-start w-100">
+     <i class="bi bi-heart"></i>
+     
+     <label for="hp" class="form-label">Hit Points</label>
+    </div>
+    <div class="d-flex flex-row">
+     <input type="number" class="form-control" id="hp" disabled>
+    <div class="p-1">
 
+     <button type="button" class="btn btn-light m-1">reset</button>
+
+      <!--need to reset just hit points only, not yet functional-->
+
+     <div class="btn-group-vertical" role="group" aria-label="modHP">
+        <!--change hit point manually, not yet functional-->
+      <button type="button" class="btn btn-light">-</button>
+      <button type="button" class="btn btn-light">+</button>
+
+     </div>
+    </div>
     </div>
     </div> 
 
     
 
     <!--Size, Alignment & Speed-->
-    <div class="form-container row ac-hp-input-wrap" style="height: 200px;">
+    <div class="container row" style="height: 200px;">
       <div class="row">
     <!--Size Field-->
       <div class="mb-2">
@@ -145,178 +169,161 @@
      </div>
     
     <!--Ability Scores-->
-    <div class="form-container d-flex flex-md-wrap" style="justify-content: space-between;">
+    <div class="container" style="justify-content: space-between;">
     
       
         <!--Strength-->
-      <div class="as-section-wrap">
-        <div class="as-input-wrap">
+      <div>
         <input type="number" class="form-control abilities" id="strength" min="4" max="20">
-        <div class="as-label-wrap">
-          <i class="fa-solid fa-hand-fist"></i>
-          <label for="strength" class="form-label">Strength</label>
-        </div>
+        <i class="fa-solid fa-hand-fist"></i>
+        <label for="strength" class="form-label">Strength</label>
       </div>
       <!--Dexterity-->
-      <div class="as-input-wrap">
+      <div>
         <input type="number" class="form-control abilities" id="dexterity" min="4" max="20">
-        <div class="as-label-wrap">
         <i class="fa-solid fa-bullseye"></i>
         <label for="dexterity" class="form-label">Dexterity</label>
-        </div>
       </div>
       <!--Constitution-->
-      <div class="as-input-wrap">
+      <div>
         <input type="number" class="form-control abilities" id="constitution" min="4" max="20">
-        <div class="as-label-wrap">
         <i class="fa-solid fa-heart"></i>
         <label for="constitution" class="form-label">Constitution</label>
-          </div>  
-        </div>
       </div>
       <!--Intelligence-->
-      <div class="as-section-wrap">
-        <div class="as-input-wrap">
+      <div>
         <input type="number" class="form-control abilities" id="intelligence" min="4" max="20">
-        <div class="as-label-wrap">
         <i class="fa-solid fa-brain"></i>
         <label for="intelligence" class="form-label">Intelligence</label>
       </div>
-    </div>
       <!--Wisdom-->
-      <div class="as-input-wrap">
+      <div>
         <input type="number" class="form-control abilities" id="wisdom" min="4" max="20">
-        <div class="as-label-wrap">
+
         <i class="fa-regular fa-eye"></i>
         <label for="wisdom" class="form-label">Wisdom</label>
       </div>
-    </div>
       <!--Charisma-->
-      <div class="as-input-wrap">
+      <div>
         <input type="number" class="form-control abilities" id="charisma" min="4" max="20">
-        <div class="as-label-wrap">
+
         <i class="fa-solid fa-face-smile-wink"></i>
         <label for="charisma" class="form-label">Charisma</label>
       </div>
-    </div>
-     </div>
+     
     </div>
 
     <!--Saving Throws Fields-->
-    <div class="form-container st-wrap">
-      <div class="st-input-wrap">
+    <div class="container">
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="str_check" value="str">
+        <input class="form-check-input-saving" type="checkbox" id="str_check" value="str">
         <label class="form-check-label" for="str_check">Strength</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="dex_check" value="dex">
+        <input class="form-check-input-saving" type="checkbox" id="dex_check" value="dex">
         <label class="form-check-label" for="dex_check">Dexterity</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="con_check" value="con">
+        <input class="form-check-input-saving" type="checkbox" id="con_check" value="con">
         <label class="form-check-label" for="con_check">Constitution</label>
       </div>
-      </div>
-      <div class="st-input-wrap">
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="int_check" value="con">
+        <input class="form-check-input-saving" type="checkbox" id="int_check" value="int">
         <label class="form-check-label" for="int_check">Intelligence</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="wis_check" value="con">
+        <input class="form-check-input-saving" type="checkbox" id="wis_check" value="wis">
         <label class="form-check-label" for="wis_check">Wisdom</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="cha_check" value="con">
+        <input class="form-check-input-saving" type="checkbox" id="cha_check" value="cha">
         <label class="form-check-label" for="cha_check">Charisma</label>
       </div>
-    </div>
     </div>
 
     <!--Racial Abilities & Skills-->
 
-    <div class="d-flex flex-wrap flex-md-nowrap">
+    <div style="display: flex; flex-wrap: nowrap;">
 
         <!--Racial Abilities Field-->
-        <div class="form-container container d-flex flex-column r-abilities" >
+        <div class="container d-flex flex-column" style="margin: 0 20px 20px 0;justify-content: flex-start;align-items: flex-start;">
         <label for="Racial Abilities" class="form-label">Racial Abilities</label>
         <textarea class="form-control h-100" aria-label="Racial Abilities"></textarea>
         </div>
 
         <!--Skills-->
 
-        <div class="form-container skills">
+        <div class="container" style="width: 250px; font-size: 14px; padding: 0;">
             <ul class="list-group">
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="acrobatics">
+                <input class="form-check-input-skills" type="checkbox" value="" id="acrobatics">
                 <label class="form-check-label" for="acrobatics">Acrobatics</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="animalHandling">
+                <input class="form-check-input-skills" type="checkbox" value="" id="animalHandling">
                 <label class="form-check-label" for="animalHandling">Animal Handling</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="arcana">
+                <input class="form-check-input-skills" type="checkbox" value="" id="arcana">
                 <label class="form-check-label" for="arcana">Arcana</label>
               </li>
               <li class="list-group-item">
-              <input class="form-check-input" type="checkbox" value="" id="arcana">
+              <input class="form-check-input-skills" type="checkbox" value="" id="arcana">
               <label class="form-check-label" for="arcana">Arcana</label>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="deception">
+                <input class="form-check-input-skills" type="checkbox" value="" id="deception">
                 <label class="form-check-label" for="deception">Deception</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="history">
+                <input class="form-check-input-skills" type="checkbox" value="" id="history">
                 <label class="form-check-label" for="history">History</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="insight">
+                <input class="form-check-input-skills" type="checkbox" value="" id="insight">
                 <label class="form-check-label" for="insight">Insight</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="intimidation">
+                <input class="form-check-input-skills" type="checkbox" value="" id="intimidation">
                 <label class="form-check-label" for="intimidation">Intimidation</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="investigation">
+                <input class="form-check-input-skills" type="checkbox" value="" id="investigation">
                 <label class="form-check-label" for="investigation">Investigation</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="medicine">
+                <input class="form-check-input-skills" type="checkbox" value="" id="medicine">
                 <label class="form-check-label" for="medicine">Medicine</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="nature">
+                <input class="form-check-input-skills" type="checkbox" value="" id="nature">
                 <label class="form-check-label" for="nature">Nature</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="perception">
+                <input class="form-check-input-skills" type="checkbox" value="" id="perception">
                 <label class="form-check-label" for="perception">Perception</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="performance">
+                <input class="form-check-input-skills" type="checkbox" value="" id="performance">
                 <label class="form-check-label" for="performance">Performance</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="persuasion">
+                <input class="form-check-input-skills" type="checkbox" value="" id="persuasion">
                 <label class="form-check-label" for="persuasion">Persuasion</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="religion">
+                <input class="form-check-input-skills" type="checkbox" value="" id="religion">
                 <label class="form-check-label" for="religion">Religion</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="sleightOfHand">
+                <input class="form-check-input-skills" type="checkbox" value="" id="sleightOfHand">
                 <label class="form-check-label" for="sleightOfHand">Sleight of Hand</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="stealth">
+                <input class="form-check-input-skills" type="checkbox" value="" id="stealth">
                 <label class="form-check-label" for="stealth">Stealth</label>
               </li>
               <li class="list-group-item">
-                <input class="form-check-input" type="checkbox" value="" id="survival">
+                <input class="form-check-input-skills" type="checkbox" value="" id="survival">
                 <label class="form-check-label" for="survival">Survival</label>
               </li>
             </ul>
@@ -325,19 +332,19 @@
  
     <!--Languages & Notes-->
     <div class="d-flex align-items-start flex-nowrap gap-4">
-      <div class="form-container container d-flex flex-column align-items-start">
+      <div class="container d-flex flex-column align-items-start">
        <label for="languages" class="form-label">Languages</label>
        <textarea class="form-control" aria-label="languages"></textarea>
       </div>
-      <div class="form-container container d-flex flex-column align-items-start">
+      <div class="container d-flex flex-column align-items-start">
         <label for="notes" class="form-label">Notes</label>
         <textarea class="form-control" aria-label="notes"></textarea>
        </div>
     </div>
 
 
-    <!--Clear Button-->
-
+    <!--Clear and Save, save not yet functional-->
+  
     <div class="d-flex justify-content-between gap-4 mb-4">
       <button type="reset" class="btn btn-danger btn-primary clearall w-100">Clear All Values</button>
     </div>
@@ -346,7 +353,7 @@
 
   <h1 class="text-center">What the F@CK <br>is this NPCs backstory?</h1>
   <!--Randomize Story-->
-  <div class="form-container container">
+  <div class="container">
     <article>
           <div id="output">
               <noscript>
