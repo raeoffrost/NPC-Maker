@@ -39,6 +39,12 @@ body {
     align-items: center;        
     text-align: center;
   }
+  .name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 20px;
+  }
 
 /* Typography */
 
@@ -81,8 +87,8 @@ color: var(--dark-red);
   }
 
   .armor {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: var(--radius);
     box-sizing: border-box;
     text-align: center;
