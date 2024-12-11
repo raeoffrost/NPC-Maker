@@ -143,6 +143,9 @@ color: var(--dark-red);
   flex: 1;
   margin: auto;
 }
+.as-input-wrap input{
+  font-size: 30px;
+}
 .as-label-wrap{
   display:flex;
   flex-direction: row;
@@ -178,6 +181,10 @@ color: var(--dark-red);
 #hp{
   width: 100px;
   height: 120px;
+  font-size: 30px;
+}
+#armor{
+  font-size: 30px;
 }
 
 .skills{
