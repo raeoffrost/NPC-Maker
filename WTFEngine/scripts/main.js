@@ -22,7 +22,7 @@ $(function() {
             "Don't really give a fuck"
         ],
     
-        template: [`${npc} was born @birthplace, and was raised by @parentage. Their family lived a @familyLifestyle livestyle at first then and ended up living @childhoodHome. During their early years, ${npc} experienced life as a @background.  
+        template: [`${npc} was born @birthplace, and was raised by @parentage. Their family lived a @familyLifestyle livestyle at first then ended up living @childhoodHome. During their early years, ${npc} experienced life as a @background.  
             As they grew older, ${npc} took up work as a @occupation. Over the course of their life, they encountered several significant events that shaped their character.  
             ${npc}’s personality was most affected by these two life events. @lifeEvent1 @lifeEvent2`  
             ],
