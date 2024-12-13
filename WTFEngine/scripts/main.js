@@ -11,8 +11,8 @@ $(function() {
     WTF.init({
         heading: [
             "It's a fucking",
-            "Check this shit out"
-            "This one is fucking crazy"
+            "Check this shit out",
+            "This one is fucking crazy",
             "Have you heard of"
         ],
     
@@ -150,25 +150,25 @@ $(function() {
         lifeEvent1: [
             `${npc} nearly died. ${npc} has nasty scars on their body, and is missing an ear.`,
             `A friendly wizard gave ${npc} a spell scroll containing one cantrip.`,
-            `A Celestial visited ${npc} in their dreams to give a warning of dangers to come.`
-            `${npc} briefly visited the Feywild.`
-            `${npc} briefly visited the Shadowfell.`
-            `A lover disappeared without a trace. ${npc} has been looking for that person ever since.`
-            `A terrible blight in ${npc}'s home community caused crops to fail, and many starved. ${npc} lost a dear friend.`
-            `${npc} was turned into a toad and remained in that form for weeks.`
-            `A dragon held ${npc} as a prisoner for months until adventurers killed it.`
+            `A Celestial visited ${npc} in their dreams to give a warning of dangers to come.`,
+            `${npc} briefly visited the Feywild.`,
+            `${npc} briefly visited the Shadowfell.`,
+            `A lover disappeared without a trace. ${npc} has been looking for that person ever since.`,
+            `A terrible blight in ${npc}'s home community caused crops to fail, and many starved. ${npc} lost a dear friend.`,
+            `${npc} was turned into a toad and remained in that form for weeks.`,
+            `A dragon held ${npc} as a prisoner for months until adventurers killed it.`,
             `${npc} ran away from a battle to save their life, but still feels shame for their cowardice.`
         ],
         lifeEvent2: [
             `${npc} was terribly frightened by something they encountered and ran away, abandoning their companions to their fate.`,
             `${npc} witnessed a powerful spell being cast by a wizard.`,
-            `${npc} committed the crime, but nonetheless the authorities found ${npc} not guilty.`
-            `${npc} lost all their possessions in a disaster, and had to rebuild their life.`
-            `For a reason they were never told, ${npc} was exiled from their community. They then either wandered in the wilderness for a time before finding a new place to live.`
-            `${npc} went insane for years and recently regained their sanity. A tic or some other bit of odd behavior still lingers.`
-            `${npc} found a treasure map and has yet to locate the treasure.`
-            `A distant relative recently left ${npc} a stipend that will enable them to live the comfortable lifestyle for at least 20 years.`
-            `${npc} woke up one morning miles from their home, with no idea how they got there.`
+            `${npc} committed the crime, but nonetheless the authorities found ${npc} not guilty.`,
+            `${npc} lost all their possessions in a disaster, and had to rebuild their life.`,
+            `For a reason they were never told, ${npc} was exiled from their community. They then either wandered in the wilderness for a time before finding a new place to live.`,
+            `${npc} went insane for years and recently regained their sanity. A tic or some other bit of odd behavior still lingers.`,
+            `${npc} found a treasure map and has yet to locate the treasure.`,
+            `A distant relative recently left ${npc} a stipend that will enable them to live the comfortable lifestyle for at least 20 years.`,
+            `${npc} woke up one morning miles from their home, with no idea how they got there.`,
             `${npc} found a portal that they believe leads to another plane of existence.`
         ]
     });
