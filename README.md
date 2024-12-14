@@ -31,6 +31,7 @@ You can also watch this short video that goes over the features and usage!
 [![Watch the video](https://img.youtube.com/vi/nwgdoNbxnG8/0.jpg)](https://www.youtube.com/watch?v=nwgdoNbxnG8)
 
 ### Manual Fill
+![Ability Scores](images/2024_12_4299.jpg) <br>
 The character sheet is a fully editable form that allows you to create a character manually. Upon selecting the character race, the Racial Abilities section will populate. This section will auto-fill whenever you select a new race and can be edited for customization.
 
 You can edit everything from name to their individual skills. There is a notes section to gather your thoughts and a languages section were you can fill in what languages work for your campaign setting. 
@@ -40,7 +41,7 @@ The clear button will let you completely start over when you are ready to make y
 There is currently no save function so please take a screenshot of your character when completed.
 
 ### Random Fill
-
+![Random Fill Button](images/2024_12_4297.jpg) <br>
 If you are low on time or looking for new ideas you can get a fully random character.
 
 Clicking randomize provides a class, race and subrace as well as ability scores, skills and saving throws. The character speed, alignment and size also fill in randomly. The name section is filled with a randomized number that you can use to keep track of your ideas. 
@@ -48,6 +49,7 @@ Clicking randomize provides a class, race and subrace as well as ability scores,
 > Please note: By selecting Random Fill  all values currently selected will be replaced.
 
 ### Recommended Fill 
+![Recommended Fill Button](images/2024_12_4296.jpg) <br>
 A randomized character can have some pretty wild stats so if you are looking for something more by-the-book you can use our recommended generation.
 
 Clicking recommended provides a class, race and subrace as well as ability scores that are tailored to the selector race and class. The speed will also fill in with the speed as determined by the race. With this option you can still randomize a new NPC while still having a well built character. You can select skills, saving throws, size, and alignment manually for extra customization.
@@ -55,7 +57,8 @@ Clicking recommended provides a class, race and subrace as well as ability score
 > Please note: By selecting Recommended Fill  all values currently selected will be replaced.
 
 ### Backstory Generator
-Lastly, your NPC is going to need a story. What will you say when the players start asking about the NPC's history? 
+<img src="images/2024_12_4298.jpg" alt="Backstory Generator Example" width="500"> <br>
+Lastly, your NPC is going to need a story. What will you say when the players start asking about the NPC's history?
 
 That's where our *What the F@CK is this NPCs backstory?* feature comes in.
 
